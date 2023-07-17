@@ -1,0 +1,1104 @@
+
+/*Template Name: Ritmo - Mobile App Landing Page HTML5 Template
+Theme URL: http://themeforest.net/user/DSA79/
+Description: Ritmo - Mobile App Landing Page HTML5 Template
+Author: DSA79
+Author URL: http://themeforest.net/user/DSA79
+Version: 1.0.0
+Website: www.dsathemes.com
+Tags: responsive, html5 template, one page, landing page, mobile, application, business, corporate, project
+*/
+
+
+/* ------------------------------------------ */
+/*             TABLE OF CONTENTS
+/* ------------------------------------------ */
+
+/*   01 - General & Basic Styles   */
+/*   02 - Header & Navigation      */
+/*   03 - Intro      			   */
+/*   04 - Features List                 */
+/*   05 - Call to Action 	  	   */
+/*   06 - Feature One		       */
+/*   07 - Feature Two               */
+/*   08 - Statistic Banner         */
+/*   09 - Feature Three               */
+/*   10 - Video Banner             */
+/*   11 - Testimonials Rotator	   */
+/*   12 - Feature Four               */
+/*   13 - FAQs		 	  	   */
+/*   14 - Newsletter	 	  	   */
+/*   15 - Footer		 	  	   */
+/*   16 - Scroll to Top	 	  	   */
+
+
+
+/* ==========================================================================
+   01. GENERAL & BASIC STYLES
+   ========================================================================== */
+
+#content_wrapper  {
+	margin-top: 60px;
+}
+  
+/*------------------------------------------*/
+/*	 Preload Animation 
+/*------------------------------------------*/
+
+#preloader{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999; 
+	background-color: #fff;
+}
+
+#status{
+	position:absolute;
+	top:50%; 
+	left:50%; 
+	margin:-100px 0 0 -100px;
+	width:200px;
+	height:200px;
+	background-image: url(../img/icons/loader.html);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 75px 75px;
+}    
+   
+/*------------------------------------------*/
+/*	 Parallax Settings
+/*------------------------------------------*/
+
+.parallax {
+	background-attachment: fixed !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#statistic-banner { 
+	background-image: url(../img/parallax/statistic-banner.jpg); 
+}
+
+#call_to_action { 
+	background-image: url(../img/parallax/call-to-action.jpg); 
+}
+
+#video { 
+	background-image: url(../img/parallax/video_banner.jpg); 
+}
+
+/*------------------------------------------*/
+/*	 Headers
+/*------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0; 
+	margin-bottom: 10px;
+}
+
+/*------------------------------------------*/
+/*	 Lists
+/*------------------------------------------*/
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*------------------------------------------*/
+/*	 Link Setting
+/*------------------------------------------*/
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+a:hover {
+	color: #444;
+	text-decoration: none;
+}
+
+a:focus {
+	color: #f8f8f8;
+	outline: none;
+	border: none;
+	text-decoration: none;
+} 
+
+/*------------------------------------------*/
+/*	 Theme Button
+/*------------------------------------------*/
+
+.btn-theme {
+	background-color: #836c51;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	padding: 10px 20px;
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.btn-theme:hover {
+	background-color: #5d4c39;
+	color: #fff;
+}
+
+/*------------------------------------------*/
+/*	 Button Hover/Focus
+/*------------------------------------------*/
+
+.btn:focus {
+	color: #f8f8f8;
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+
+/*------------------------------------------*/
+/*	 Feature Section Basic Styles
+/*------------------------------------------*/ 
+   
+.feature_image .img-responsive { 
+	display: inline-block; 
+	margin: 0 auto;
+} 
+
+.feature_description h2 {
+	color: #222;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.feature_description p {
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	line-height: 26px;
+}  
+
+
+
+/* ==========================================================================
+   02. HEADER & NAVIGATION
+   ========================================================================== */
+
+/*------------------------------------------*/
+/*	 Logo Image    
+/*------------------------------------------*/
+
+.navbar-brand {
+	padding: 10px 15px;
+}  
+     
+/*------------------------------------------*/
+/*	 Navigation Menu    
+/*------------------------------------------*/
+
+.navbar {	
+	margin-bottom: 0;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.navbar-fixed-top { 
+	background-color: #f4f4f4;
+	border-bottom: 1px solid #ddd;
+}
+
+.navbar-nav > li > a {
+	color: #222;
+	font-size: 13px;
+	font-family: 'Raleway', sans-serif;
+	line-height: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+	padding: 0 15px;
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	 Menu Hover
+/*------------------------------------------*/
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a.selected-nav {
+	color: #836c51;
+	background-color: transparent;
+}
+
+/*------------------------------------------*/
+/*	 Responsive Menu    
+/*------------------------------------------*/
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+	background-color: none;
+    padding: 10px;
+	margin: 13px 30px 13px 0;
+	border: none;
+	color: #fff;
+	border: 2px solid #333;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #333;
+}
+
+
+
+/* ==========================================================================
+   03. INTRO
+   ========================================================================== */
+
+/*------------------------------------------*/
+/*	 Intro Header Basic Settings
+/*------------------------------------------*/
+
+#intro {
+	width: 100%; 
+	background-image: url(../img/thumbs/intro_header_bkg.png);
+	background-color: #836c51;
+	background-repeat: no-repeat;
+	background-position: center center;		
+	background-size: cover;
+	color: #fff;
+	padding-top: 100px;
+}
+
+/*------------------------------------------*/
+/*	 Intro Description 
+/*------------------------------------------*/
+
+#intro_description h1 {
+	font-size: 50px;
+	font-weight: 900;
+	line-height: 50px;
+	margin-top: 60px;
+	margin-bottom: 5px;
+}
+
+#intro_description h2 { 
+	font-size: 30px;
+	font-weight: 900;
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+#intro_description p { 
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	line-height: 28px;
+}
+
+/*------------------------------------------*/
+/*	 Intro Store Icons
+/*------------------------------------------*/
+
+#intro_stores {
+	margin-top: 50px;
+}
+
+#intro_stores a {
+	margin-right: 5px;
+}
+
+#intro_stores a:last-child {
+	margin-right: 0;
+}
+
+/*------------------------------------------*/
+/*	 Intro Image
+/*------------------------------------------*/
+
+#intro_image .img-responsive { 
+	display: inline-block; 
+}
+
+
+
+/* ==========================================================================
+   04. FEATURES LIST
+   ========================================================================== */
+
+#features .row {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}  
+   
+.features_title h1 {
+	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 40px;
+} 
+   
+/*------------------------------------------*/
+/*	  Feature Box
+/*------------------------------------------*/
+
+.feature-box {
+	margin-bottom: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/*------------------------------------------*/
+/*	  Feature Box Icon
+/*------------------------------------------*/
+
+.feature-box-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    border-radius: 30px;
+    color: #836c51;
+    line-height: 60px;
+    text-align: center;
+    font-size: 48px;
+}
+
+/*------------------------------------------*/
+/*	  Feature Box Content
+/*------------------------------------------*/
+
+.feature-box-content {
+	padding-left: 70px;
+}
+
+.feature-box-content h4 {
+	color: #333;
+	font-weight: 700;
+}
+
+.feature-box-content p {
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	line-height: 24px;
+}
+
+
+
+/* ==========================================================================
+   05. CALL TO ACTION
+   ========================================================================== */
+
+#call_to_action {
+	padding-top: 50px;
+}   
+
+#call_to_action .row {
+	padding-bottom: 50px;
+}
+
+/*------------------------------------------*/
+/*	 Call-To-Action Slogan
+/*------------------------------------------*/  
+
+#cta_slogan h2 {
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 2px;
+}
+
+#cta_slogan h2 span {
+	color: #836c51;
+}
+
+#cta_slogan p {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;	
+	line-height: 26px;
+	margin-bottom: 0;
+}
+
+/*------------------------------------------*/
+/*	 Call-To-Action Button
+/*------------------------------------------*/  
+
+#cta_button a {
+	margin-top: 5px;
+}
+
+
+
+/* ==========================================================================
+   06. FEATURE ONE
+   ========================================================================== */
+
+#feature_one .row {
+	padding-top: 120px;
+	padding-bottom: 100px;
+} 
+
+/*------------------------------------------*/
+/*	 Feature One Description
+/*------------------------------------------*/	
+
+#feature_1_description {
+	margin-top: 100px;
+}
+
+
+
+/* ==========================================================================
+   07. FEATURE TWO
+   ========================================================================== */
+
+#feature_two .row {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}   
+
+/*------------------------------------------*/
+/*	 Feature Two Description
+/*------------------------------------------*/	
+
+#feature_2_description {
+	margin-top: 60px;
+}
+
+
+
+/* ==========================================================================
+   08. STATISTIC BANNER
+   ========================================================================== */
+
+#statistic-holder {
+	padding-top: 65px;
+	padding-bottom: 65px;
+} 
+
+/*------------------------------------------*/
+/*	  Statistic Banner Content
+/*------------------------------------------*/ 
+
+.statistic-block {
+	text-align: center;
+}
+
+.statistic-icon {
+	color: #836c51;
+	font-size: 70px;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 60px;	
+}
+
+.statistic-number {
+	color: #fff;
+	font-size: 70px;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 70px;
+	font-weight: 900;
+}
+
+.statistic-text {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+ 
+
+
+/* ==========================================================================
+   09. FEATURE THREE
+   ========================================================================== */
+
+#feature_three .row {
+	padding-top: 120px;
+	padding-bottom: 80px;
+}   
+
+/*------------------------------------------*/
+/*	 Feature Three Description
+/*------------------------------------------*/	
+
+#feature_3_description {
+	margin-top: 90px;
+}
+
+/*------------------------------------------*/
+/*	  Feature List Content
+/*------------------------------------------*/
+
+#feature_three_list {
+	margin-top: 35px;
+}
+
+.list-item {
+	margin-bottom: 18px;
+}
+
+.list-item i {
+	color: #222;
+	margin-right: 10px;
+	font-size: 17px;
+}
+
+.list-item h5 {
+	color: #222;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+
+
+/* ==========================================================================
+   10. VIDEO BANNER
+   ========================================================================== */
+
+#video {
+	padding-top: 100px;
+}
+
+#video_title h2 {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+#video_title h2 span {
+	font-weight: 700;
+}
+
+#video_title p {
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	line-height: 26px;
+	margin-bottom: 40px;
+}
+
+/*------------------------------------------*/
+/*	  Video Content Settings
+/*------------------------------------------*/ 
+
+.video-block {
+	position: relative;
+	padding-bottom: 54.25%;
+	padding-top: 20px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-block iframe,
+.video-block object,
+.video-block embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border:0;
+}
+
+
+
+/* ==========================================================================
+   11. TESTIMONIALS ROTATOR
+   ========================================================================== */
+  
+.testimonials {
+	margin: 120px 8% 80px;
+}
+
+.slides {
+	margin: 10px 0 200px;
+}
+
+/*------------------------------------------*/
+/*	 Message Author
+/*------------------------------------------*/
+
+.testimonials p.author {
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	margin-bottom: 0;
+	padding-top: 10px;
+}
+
+.testimonials p.author span {
+	color: #5d4c39;
+}
+
+/*------------------------------------------*/
+/*	 Testimonial Message Text
+/*------------------------------------------*/
+
+.testimonials p {
+	font-size: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	line-height: 46px;
+    padding-top: 10px;
+}
+
+
+
+/* ==========================================================================
+   12. FEATURE FOUR
+   ========================================================================== */
+   
+#feature_four {
+	background-image: url(../img/thumbs/pattern.png);
+	background-color: #836c51;	
+	background-repeat: repeat;
+	background-position: 0 0;
+	padding-bottom: 40px;	
+	color: #fff;
+}
+
+/*------------------------------------------*/
+/*	 Feature Four Image
+/*------------------------------------------*/
+
+#feature_4_image {
+	margin-top: -120px;
+}
+
+/*------------------------------------------*/
+/*	 Feature Four Description
+/*------------------------------------------*/	
+
+#feature_4_description {
+	margin-top: 145px;	
+}
+
+#feature_4_description h2 {
+	color: #fff;
+}
+
+#feature_4_description p {
+	color: #fff;
+}
+
+/*------------------------------------------*/
+/*	 Feature Four Stores Buttons
+/*------------------------------------------*/
+
+.stores {
+	margin-top: 40px;
+}
+
+.stores a {
+	margin-right: 8px;
+}
+
+.stores a:last-child {
+	margin-right: 0;
+}
+
+
+
+/* ==========================================================================
+   13. FAQs
+   ========================================================================== */
+ 
+#faq {
+	padding-top: 100px;
+}
+
+#last_row {
+	padding-bottom: 100px;
+}
+
+#faq h1 {
+	color: #222;
+	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+/*------------------------------------------*/
+/*	  FAQs Question
+/*------------------------------------------*/
+
+.question {
+	margin-bottom: 20px;
+}
+  
+.question h4 {
+	font-weight: 600;
+	line-height: 26px;
+}
+
+.question p {
+	color: #666;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	line-height: 26px;
+}
+
+
+
+/* ==========================================================================
+   14. NEWSLETTER
+   ========================================================================== */
+
+#newsletter {
+	padding-top: 60px;
+	padding-bottom: 80px;
+	background-image: url(../img/thumbs/newsletter_bkg.jpg);
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+#newsletter h1 {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+#newsletter p {
+	color: #999;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	padding: 0 20%;
+}
+
+.message {
+	font-size: 18px;
+    font-family: 'Raleway', sans-serif;	
+	margin-bottom: 20px;
+}
+
+/*------------------------------------------*/
+/*	  Newsletter Form Input
+/*------------------------------------------*/
+
+#newsletter form input[type="email"] {
+    background-color: #f0f0f0;
+	width: 40%;
+	color: #414141;
+	font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#newsletter form input[type="submit"] {
+	width: 16%;
+	background-color: #836c51;
+	color: #fff;
+	font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+	text-transform: uppercase;
+    margin-left: 10px;
+    padding: 10px 15px;
+	border: medium none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+#newsletter form input[type="submit"]:hover {
+	background-color: #5d4c39;
+}
+
+
+
+/* ==========================================================================
+   15. FOOTER
+   ========================================================================== */
+
+#footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/*------------------------------------------*/
+/*	 Footer Copy 
+/*------------------------------------------*/  
+
+#footer_copy p {
+	color: #666;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 0;
+}
+
+/*------------------------------------------*/
+/*	 Footer Social Icons  
+/*------------------------------------------*/
+
+.footer-socials {
+	display: inline-block; 
+	padding-left: 0;
+}
+
+.footer-socials li {
+	float: left;
+	width: auto !important;
+    display: inline-block !important;
+    vertical-align: top;
+    clear: none !important;
+	padding: 0;
+}
+
+/*------------------------------------------*/
+/*	 Footer Social Icon Setting 
+/*------------------------------------------*/
+
+.foo_social {
+	text-align: center;
+	color: #7f7f7f;
+	font-size: 20px;
+    line-height: 40px;
+	margin: 0 15px;
+    display: block;
+    text-decoration: none;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	 Footer Social Icons Hover 
+/*------------------------------------------*/
+
+.foo_social.ico-facebook:hover {color: #3b5998;}
+.foo_social.ico-twitter:hover {color: #00a9ed;}
+.foo_social.ico-behance:hover {color: #00a8e7;}
+.foo_social.ico-google-plus:hover {color: #cd1111;}
+.foo_social.ico-linkedin:hover {color: #015886;}
+.foo_social.ico-dribbble:hover {color: #d92d84;}
+.foo_social.ico-instagram:hover {color: #beb3a8;}
+.foo_social.ico-pinterest:hover {color: #ac281a; }
+.foo_social.ico-dropbox:hover {color: #008ad2;}
+.foo_social.ico-skype:hover {color: #00a9ed; }
+.foo_social.ico-youtube:hover {color: #cd1b20;}
+.foo_social.ico-tumblr:hover {color: #3a5976;}
+.foo_social.ico-vimeo:hover {color: #00adee;}
+.foo_social.ico-flickr:hover {color: #d2d2d2; }
+.foo_social.ico-github:hover {color: #222; }
+.foo_social.ico-renren:hover {color: #364a83;}
+.foo_social.ico-vk:hover  {color: #3b5998;}
+.foo_social.ico-xing:hover  {color: #015f5e;}
+.foo_social.ico-weibo:hover {color: #be4443; }
+.foo_social.ico-rss:hover {color: #ff6600;}
+.foo_social.ico-digg:hover  {color: #222;}
+.foo_social.ico-deviantart:hover {color: #57675d;}
+.foo_social.ico-envelope:hover {color: #999; }
+.foo_social.ico-delicious:hover {color: #0A0A0A;}
+
+
+
+/* ==========================================================================
+   16. SCROLL TO TOP
+   ========================================================================== */
+
+#scrollUp {
+	display: none;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background-image: url(../img/icons/back-to-top.png);
+	background-repeat: no-repeat;
+	background-position: 50% 48%;
+	background-color:rgba(123, 123, 123, 0.65);	
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+	-webkit-transition: all 250ms linear;
+	-moz-transition: all 250ms linear;
+	transition: all 250ms linear;	
+}
+
+#scrollUp:hover {
+	background-color: rgba(131, 108, 81, 0.95);
+}
+
+nav a#pull {  
+    display: none;  
+}
+
+
+
+
+/* ==========================================================================
+   STYLE CHANGER 
+   ========================================================================== */
+
+#stlChanger {
+	color:#cecece;
+	font-size: 14px;
+	overflow:hidden;
+	position:fixed;
+	top: 80px;
+	left:0;
+	z-index:9999999;
+}
+
+#stlChanger .siteChanger, 
+#stlChanger .bgChanger,
+ #stlChanger .buts {
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger .siteChanger, 
+#stlChanger .bgChanger {
+	min-width: 220px;
+	min-height: 220px;
+}
+
+#stlChanger a:hover {text-decoration:none;}
+
+#stlChanger .blockChanger {
+	width: 170px;
+}
+
+#stlChanger .chBody {
+	background: #444;
+	width: 180px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #222;
+	border-radius: 0 6px 6px 0;
+}
+
+#stlChanger .chBut {
+	background: #444;
+	width: 40px;
+	height: 40px;
+	position:absolute;
+	top: 15px;
+	right:0px;
+	z-index:1000000;
+	text-align: center;
+	border: 1px solid #222;
+	border-left: none;
+	border-radius: 0px 4px 4px 0px;
+}
+
+#stlChanger .chBut i {
+	color:#fff;
+	font-size: 28px;
+	margin: 6px;
+}
+
+#stlChanger .stBlock {
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger p {
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+
+#stlChanger h4 {
+	color: #444;
+	font-size: 18px;
+	background: #444;
+	font-weight: 900;
+	line-height: 22px;
+	display:block;
+	margin-top: 0;
+	padding: 8px 10px 9px;
+}
+
+.layout_color {
+	background: url(../img/color-scheme/light.jpg) no-repeat top center;
+	width: 142px;
+	height: 30px;
+	display: inline-block;
+	text-indent: 9999px;
+	overflow: hidden;
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+
+.layout_color { background-position: 0 top;}
+.layout_color:hover { background-position: 0 bottom;}
+
+a.t_layout {
+	color: #fff;
+	font-size: 14px; 
+	font-family: 'Raleway', sans-serif; 
+	font-weight: 300;
+}
+
+a.t_layout.t_Layout_act {
+	color: #777;
+}
+
+a.t_layout:hover {
+	color: #aaa;
+}
+
+a.t_layout.t_Layout_act:hover {
+	color: #777;
+}
+
+#stlChanger .stBgs a  {
+	text-decoration:none;
+	width: 45px;
+	height: 45px;
+	float:left;
+	padding:0;
+	margin: 3px 3px 0 0;
+	cursor:pointer;
+	opacity: 1;
+}
+
+#stlChanger .stBgs a:hover {
+	opacity: 0.7;
+}
+
+#stlChanger .btn-theme {
+	font-size: 16px;	
+	padding: 6px 10px;
+}
