@@ -1,5 +1,15 @@
 <script setup>
 
+/* Menue */
+ const menueItemList = [
+  '<a id="GoToHome" class="selected-nav" href="#intro">Home</a>',
+  '<a id="GoToFeatures" href="#features">Features</a>',
+  '<a id="GoToVideo" href="#video">Video</a>',
+  '<a id="GoToTestimonials" href="#testimonials-rotator">Testimonials</a>',
+  '<a id="GoToFAQ" href="#faq">FAQ</a>',
+  '<a id="GoToSubscribe" href="#newsletter">Subscribe</a>'
+ ]
+
 /* banner */
   const banner= {
     title: "Use Ritmo to create",
@@ -64,6 +74,16 @@
   /* Call to Action */
   const callToActionTitle = "Try <span>Ritmo </span> yourself to see how easy it is"
   const callToActionDesc  = "Vestibulum at est vel felis adipiscing tincidunt quis pretium mollis"
+  const callToActionBtnStyle = `
+    background-color: #19acca;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 0px;
+    transition: all 200ms ease-in-out;
+  `
 
   /* Feature One */
   const featureOneTitle = "Fully responsive layout"
@@ -128,22 +148,30 @@
       <p>&laquo; Etiam condimentum sapien sem condimentum accumsan. Proin in adipiscing elit. Suspendisse dignissim sollicitudin 
           ornare at sagittis elementum vulputate congue &raquo;												   
       </p>												
-    </div><p class="author">Jonathan Doe <span>Programmer</span></p>`,
-    `div class="client-msg">													
-      <p>&laquo; Suspendisse cursus risus laoreet turpis auctor, pharetra massa varius. Suspendisse dignissim sollicitudin aliquam.
-          Nullam vehicula pharetra ultrices sapien gravida &raquo;
-      </p>													
-    </div><p class="author">Karen Olson <span>Housewife</span></p>`,
-    `div class="client-msg">	
-      <p>&laquo; In eget urna nisl bibendum dapibus. Phasellus nec euismod mauris. Morbi vitae rutrum turpis.
-          Phasellus molestie posuere ligula ligula aliquet imperdiet vitae &raquo;
-      </p>													
-    </div><p class="author">Jonathan Doe <span>Manager</span></p>`,
+    </div>
+    <p class="author">Jonathan Doe <span>Programmer</span></p>`,
+
+    `<div class="client-msg">										
+      <p>&laquo; Etiam condimentum sapien sem condimentum accumsan. Proin in adipiscing elit. Suspendisse dignissim sollicitudin 
+          ornare at sagittis elementum vulputate congue &raquo; Suspendisse dignissim sollicitudin 
+          ornare at sagittis elementum vulputate congue												   
+      </p>												
+    </div>
+    <p class="author">Karen Olson <span>Programmer</span></p>`,
+
+    `<div class="client-msg">										
+      <p>&laquo; Etiam condimentum sapien sem condimentum accumsan. Proin in adipiscing elit. Suspendisse dignissim sollicitudin 
+          ornare at sagittis elementum vulputate congue &raquo;												   
+      </p>												
+    </div>
+    <p class="author">Jonathan Doe <span>Programmer</span></p>`,
+
     `<div class="client-msg">													
       <p>&laquo; Vivamus a purus lacus tempor volutpat. Etiam odio purus, placerat interdum vestibulum rutrum aliquet vulputate.
           Proin euismod pulvinar aliquam &raquo; 
       </p>													
-    </div><p class="author">Hannah Brown <span>Internet Surfer</span></p>`
+    </div>
+    <p class="author">Hannah Brown <span>Internet Surfer</span></p>`
   ]
 
   /* FAQs */
@@ -184,6 +212,20 @@
   /* NEWSLETTER */
   const newsLaterTitle = "Sign up for our newsletter now"
   const newsLaterSubtitle = "Be amongst the first to know about news and upcoming features"
+  const newsLaterBtnStyle = `
+    width: 16%;
+    background-color: #19acca;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: medium none;
+    border-radius: 5px;
+    transition: all 250ms ease-in-out;
+  `
 
   /* Footer */
   const footerSocialIcon = [
@@ -215,7 +257,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          
+          {{ selectedMenue }}
           <!-- Logo Image -->
           <a class="navbar-brand" href="#"><img src="../public/img/logo.png" alt="logo" role="banner"></a>
           
@@ -223,67 +265,17 @@
         
         
         <!-- Navigation Menu -->
-        <nav id="navigation-menu" class="collapse navbar-collapse"  role="navigation">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a id="GoToHome" class="selected-nav" href="#intro">Home</a></li>
-            <li><a id="GoToFeatures" href="#features">Features</a></li>
-            <li><a id="GoToTestimonials" href="#testimonials-rotator">Testimonials</a></li>	
-            <li><a id="GoToFAQ" href="#faq">FAQ</a></li>
-            <li><a id="GoToSubscribe" href="#newsletter">Subscribe</a></li>
-          </ul>
-        </nav>  <!-- End Navigation Menu -->
+					<nav id="navigation-menu" class="collapse navbar-collapse"  role="navigation">
+						<ul class="nav navbar-nav navbar-right">
+							<li v-for="menuItem in menueItemList" v-html="menuItem"></li>
+						</ul>
+					</nav>  <!-- End Navigation Menu -->
         
         
       </div>	  <!-- End container -->
     </div>		<!-- End navbar fixed top  -->		
 	</header>	<!-- END HEADER -->
 
-  <!-- STYLE SWITCHER
-		============================================= -->
-		<!-- <div id="stlChanger">
-			<div class="blockChanger bgChanger">
-        <a href="#" class="chBut"><i class="fa fa-gear fa-2x"></i></a>
-        <div class="chBody">
-
-          <div class="stBlock text-center" style="margin: 30px 18px 15px 13px;">
-            <p style="margin-left: 3px">Layout Color</p>	
-                          
-            <a class="layout_color" href="http://dsathemes.com/html/ritmo/dark/image/index.html"></a>
-          
-          </div>
-
-          <div class="stBlock text-center" style="margin: 0 18px 15px 13px;">
-            <p style="margin-left: 5px">Template Layout</p>	
-
-            <a class="t_layout t_Layout_act" href="#">Single Image</a>
-            <a class="t_layout" href="https://dsathemes.com/html/ritmo/light/slider/index.html">Fullscreen Slider</a><br />													
-            <a class="t_layout" href="https://dsathemes.com/html/ritmo/light/register_form/index.html">Register Form</a>	
-          
-          </div>
-          
-          <div class="stBlock" style="margin: 0 13px 20px 18px;">
-            <p style="margin-left: 16px;">Color Scheme</p>						
-            <div class="stBgs" style="margin: 15px 0 20px;">	
-              <a href="javascript:chooseStyle('lightgreen-theme', 60)"><img src="img/color-scheme/lightgreen.png" alt="" /></a>
-              <a href="javascript:chooseStyle('darkpink-theme', 60)"><img src="img/color-scheme/darkpink.png" alt="" /></a>
-              <a href="javascript:chooseStyle('turquoise-theme', 60)"><img src="img/color-scheme/turquoise.png" alt="" /></a>
-              <a href="javascript:chooseStyle('honeydew-theme', 60)"><img src="img/color-scheme/honeydew.png" alt="" /></a>
-              <a href="javascript:chooseStyle('wheat-theme', 60)"><img src="img/color-scheme/wheat.png" alt="" /></a>
-              <a href="javascript:chooseStyle('darkorchid-theme', 60)"><img src="img/color-scheme/darkorchid.png" alt="" /></a>	
-              <a href="javascript:chooseStyle('darkblue-theme', 60)"><img src="img/color-scheme/darkblue.png" alt="" /></a>								
-              <a href="javascript:chooseStyle('darkred-theme', 60)"><img src="img/color-scheme/darkred.png" alt="" /></a>									
-              <a href="javascript:chooseStyle('green-theme', 60)"><img src="img/color-scheme/green.png" alt="" /></a>																
-            </div>
-          </div>
-          
-          <div class="stBlock" style="margin: 0px 0px 40px 33px;">
-            <a class="btn btn-theme" href="javascript:chooseStyle('none', 60)" checked="checked">Reset color</a>							
-          </div>
-
-        </div>
-			</div>
-		</div>	   -->
-    <!-- END SWITCHER -->
 
     <!-- CONTENT WRAPPER
 		============================================= -->
@@ -382,7 +374,7 @@
 						
 						<!-- Call To Action Button -->
 						<div id="cta_button" class="col-md-3 text-right">
-							<a href="#" class="btn btn-theme btn-lg">Download Now</a>
+							<a href="#" class="btn btn-lg" :style="callToActionBtnStyle">Download Now</a>
 						</div>
 						
 											
@@ -628,7 +620,7 @@
 							<form id="newsletter_form" method="post" action="https://dsathemes.com/html/ritmo/light/image/newsletter.php">
 								<div id="newsletterfields">
 									<input id="email" type="email" value="" name="email" placeholder="Enter your email address">
-									<input type="submit" value="Notify Me">
+									<input type="submit" value="Notify Me" :style="newsLaterBtnStyle">
 								</div>
 							</form>	
 

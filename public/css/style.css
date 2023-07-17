@@ -817,7 +817,7 @@ a:focus {
     border-radius: 5px;
 }
 
-#newsletter form input[type="submit"] {
+/* #newsletter form input[type="submit"] {
 	width: 16%;
 	background-color: #19acca;
 	color: #fff;
@@ -836,7 +836,7 @@ a:focus {
 	-o-transition: all 250ms ease-in-out;
 	-ms-transition: all 250ms ease-in-out;
 	transition: all 250ms ease-in-out;
-}
+} */
 
 #newsletter form input[type="submit"]:hover {
 	background-color: #1292ac;
