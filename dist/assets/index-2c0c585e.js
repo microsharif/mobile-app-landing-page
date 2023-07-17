@@ -27,7 +27,7 @@
     border: medium none;
     border-radius: 5px;
     transition: all 250ms ease-in-out;
-  `,Lc={__name:"App",setup(e){const t=['<a id="GoToHome" class="selected-nav" href="#intro">Home</a>','<a id="GoToFeatures" href="#features">Features</a>','<a id="GoToVideo" href="#video">Video</a>','<a id="GoToTestimonials" href="#testimonials-rotator">Testimonials</a>','<a id="GoToFAQ" href="#faq">FAQ</a>','<a id="GoToSubscribe" href="#newsletter">Subscribe</a>'],s={title:"Use Ritmo to create",subtitle:"the awesome App landing page",description:`<p>Vestibulum at est vel felis adipiscing tincidunt. Proin quis diam ac lectus pretium mollis interdum sed erat. Phasellus eget
+  `,Lc={__name:"App",setup(e){const t=['<a id="GoToHome" class="selected-nav" href="#intro">Home</a>','<a id="GoToFeatures" href="#features">Features</a>','<a id="GoToTestimonials" href="#testimonials-rotator">Testimonials</a>','<a id="GoToFAQ" href="#faq">FAQ</a>','<a id="GoToSubscribe" href="#newsletter">Subscribe</a>'],s={title:"Use Ritmo to create",subtitle:"the awesome App landing page",description:`<p>Vestibulum at est vel felis adipiscing tincidunt. Proin quis diam ac lectus pretium mollis interdum sed erat. Phasellus eget
                   neque eu ipsum laoreet suscipit tincidunt suscipit purus rutrum sagittis turpis
                 </p>
               
