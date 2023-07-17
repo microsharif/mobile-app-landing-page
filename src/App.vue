@@ -4,7 +4,6 @@
  const menueItemList = [
   '<a id="GoToHome" class="selected-nav" href="#intro">Home</a>',
   '<a id="GoToFeatures" href="#features">Features</a>',
-  '<a id="GoToVideo" href="#video">Video</a>',
   '<a id="GoToTestimonials" href="#testimonials-rotator">Testimonials</a>',
   '<a id="GoToFAQ" href="#faq">FAQ</a>',
   '<a id="GoToSubscribe" href="#newsletter">Subscribe</a>'
