@@ -266,7 +266,7 @@
         <!-- Navigation Menu -->
 					<nav id="navigation-menu" class="collapse navbar-collapse"  role="navigation">
 						<ul class="nav navbar-nav navbar-right">
-							<li v-for="menuItem in menueItemList" v-html="menuItem"></li>
+							<li v-for="(menuItem, index ) in menueItemList" :key="index" v-html="menuItem"></li>
 						</ul>
 					</nav>  <!-- End Navigation Menu -->
         
@@ -292,14 +292,13 @@
 							<h1>{{ banner.title }}</h1>
 							<h2>{{ banner.subtitle }}</h2>
 							
-              <div v-html="banner.description"></div>
+              				<div v-html="banner.description"></div>
 						
 							<!-- Store Buttons -->
 							<div id="intro_stores">
-								<a v-for="storeSrc in bannerIntroStoeSrc" href="#">
-                  <img v-bind="storeSrc"/>
-                </a>			
-								<!-- <a href="#"><img src="img/icons/windows.png" alt="windows_icon" /></a> -->
+								<a v-for="(storeSrc, index) in bannerIntroStoeSrc" :key="index" href="#">
+									<img v-bind="storeSrc"/>
+								</a>			
 							</div>
 						
 						</div>	<!-- End Intro Description -->
@@ -335,7 +334,7 @@
 							<ul class="features_list">
 							
 								<!-- Feature Icon 1 -->
-								<li v-for="feature in featureList" :id="feature.id">       									
+								<li v-for="(feature, index) in featureList" :key="index" :id="feature.id">       									
 									<div class="col-sm-6 col-md-4 feature-box triggerAnimation animated clearfix" data-animate="bounceIn">	
 										<div class="feature-box-icon">
 											<i :class="feature.iconCalss"></i>
@@ -447,7 +446,7 @@
 					<div id="statistic-holder" class="row">
 
 						<!-- Statistic Element #1 -->
-						<div v-for="statistic in staticBannerItem" class="col-xs-3 col-sm-3 col-md-3 statistic-block triggerAnimation animated" data-animate="bounceIn">
+						<div v-for="(statistic, index ) in staticBannerItem" :key="index" class="col-xs-3 col-sm-3 col-md-3 statistic-block triggerAnimation animated" data-animate="bounceIn">
 							<div class="statistic-icon" v-html="statistic.icon"></div>
 							<div class="statistic-number">{{ statistic.number }}</div>
 							<div class="statistic-text">{{ statistic.text }}</div>
@@ -481,7 +480,7 @@
 							<div id="feature_three_list">
 
 								<!-- List Item #1 -->
-								<div class="list-item" v-for="feature in featureThreeList" v-html="feature"></div>
+								<div class="list-item" v-for="(feature, index) in featureThreeList" :key="index" v-html="feature"></div>
                 
 							</div>	<!-- End Feature List -->	
 						
@@ -503,7 +502,7 @@
 							<div class="flexslider">											
 								<ul class="slides">					
 									<!--Testimonial #1 -->
-									<li v-for="testimonialItem in testimonialRotatorList">
+									<li v-for="(testimonialItem, index) in testimonialRotatorList" :key="index">
 										<div class="testimonials" v-html="testimonialItem"></div>
 									</li>																
 								</ul>												
@@ -641,7 +640,7 @@
 					<div class="row">									
 						<div id="footer_icons" class="col-md-12 text-center">																	
 							<ul class="footer-socials clearfix">
-								<li v-for="socialItem in footerSocialIcon" v-html="socialItem"></li>							
+								<li v-for="(socialItem, index) in footerSocialIcon" :key="index" v-html="socialItem"></li>							
 							</ul>
 						</div>	 <!-- End Footer Social Icons -->	
 					</div>
